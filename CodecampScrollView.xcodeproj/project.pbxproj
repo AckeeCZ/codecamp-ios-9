@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		79165BAD1CBA9B01000F6294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAC1CBA9B01000F6294 /* AppDelegate.swift */; };
-		79165BAF1CBA9B01000F6294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAE1CBA9B01000F6294 /* ViewController.swift */; };
+		79165BAF1CBA9B01000F6294 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */; };
 		79165BB41CBA9B01000F6294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79165BB31CBA9B01000F6294 /* Assets.xcassets */; };
 		79165BB71CBA9B01000F6294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79165BB51CBA9B01000F6294 /* LaunchScreen.storyboard */; };
 		79DE82441CBAA7A2003749DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82431CBAA7A2003749DB /* TableViewController.swift */; };
 		79DE82461CBAA7B8003749DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82451CBAA7B8003749DB /* TableViewCell.swift */; };
 		79DE82481CBAEC9D003749DB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82471CBAEC9D003749DB /* Utils.swift */; };
+		79DE824A1CBB087D003749DB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82491CBB087D003749DB /* CollectionViewController.swift */; };
+		79DE824C1CBB0B16003749DB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE824B1CBB0B16003749DB /* CollectionViewCell.swift */; };
 		FF09B7769975FA839C5AE4CD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12BE2507954600B16EF0CB4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79165BA91CBA9B01000F6294 /* CodecampScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodecampScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79165BAC1CBA9B01000F6294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79165BAE1CBA9B01000F6294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		79165BB31CBA9B01000F6294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79165BB61CBA9B01000F6294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79165BB81CBA9B01000F6294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79DE82431CBAA7A2003749DB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		79DE82451CBAA7B8003749DB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		79DE82471CBAEC9D003749DB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		79DE82491CBB087D003749DB /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		79DE824B1CBB0B16003749DB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9564DA748F5B123F4528565C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0B92132C8B2A01B20DB26D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F12BE2507954600B16EF0CB4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,13 +78,15 @@
 			isa = PBXGroup;
 			children = (
 				79165BAC1CBA9B01000F6294 /* AppDelegate.swift */,
-				79165BAE1CBA9B01000F6294 /* ViewController.swift */,
+				79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */,
 				79165BB31CBA9B01000F6294 /* Assets.xcassets */,
 				79165BB51CBA9B01000F6294 /* LaunchScreen.storyboard */,
 				79165BB81CBA9B01000F6294 /* Info.plist */,
 				79DE82431CBAA7A2003749DB /* TableViewController.swift */,
 				79DE82451CBAA7B8003749DB /* TableViewCell.swift */,
+				79DE82491CBB087D003749DB /* CollectionViewController.swift */,
 				79DE82471CBAEC9D003749DB /* Utils.swift */,
+				79DE824B1CBB0B16003749DB /* CollectionViewCell.swift */,
 			);
 			path = CodecampScrollView;
 			sourceTree = "<group>";
@@ -215,8 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DE824A1CBB087D003749DB /* CollectionViewController.swift in Sources */,
 				79DE82481CBAEC9D003749DB /* Utils.swift in Sources */,
-				79165BAF1CBA9B01000F6294 /* ViewController.swift in Sources */,
+				79165BAF1CBA9B01000F6294 /* ScrollViewController.swift in Sources */,
+				79DE824C1CBB0B16003749DB /* CollectionViewCell.swift in Sources */,
 				79DE82461CBAA7B8003749DB /* TableViewCell.swift in Sources */,
 				79DE82441CBAA7A2003749DB /* TableViewController.swift in Sources */,
 				79165BAD1CBA9B01000F6294 /* AppDelegate.swift in Sources */,

@@ -13,7 +13,7 @@ private let cellId = "cellId"
 //class TableViewController: UIViewController {
 //
 //    override func loadView() {
-//        let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
+//        super.loadView()
 //
 //        let tableView = UITableView(frame: .zero, style: .Plain)
 //        view.addSubview(tableView)
@@ -208,15 +208,15 @@ extension TableViewController/*: UIScrollViewDelegate*/ {
 }
 
 class TableViewController: UIViewController {
-    
+
     override func loadView() {
         let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
-        
+
         let tableView = UITableView(frame: .zero, style: .Plain)
         view.addSubview(tableView)
         self.tableView = tableView
     }
-    
+
     weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -235,7 +235,7 @@ extension TableViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100
     }
-    
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
         cell.thumbnailImageView.image = UIImage(named: "profile")

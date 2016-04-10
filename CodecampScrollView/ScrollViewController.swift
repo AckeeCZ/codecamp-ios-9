@@ -59,7 +59,7 @@ import SnapKit
 //    }
 //}
 
-class ViewController: UIViewController {
+class ScrollViewController: UIViewController {
 
     override func loadView() {
         let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension ScrollViewController: UIScrollViewDelegate {
     // scroll
     func scrollViewDidScroll(scrollView: UIScrollView) { }
     func scrollViewWillBeginDragging(scrollView: UIScrollView) { }

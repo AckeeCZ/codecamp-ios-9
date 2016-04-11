@@ -4,7 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Argo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Curry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DADEDA1CAB9F998932ABF08230D4BFAB</key>
+		<key>14B76C1EE6F82EFC604A0A386035EC48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB57BAD769666D2CD91B650DB10CB847</key>
+		<key>28E618D9359494C1A68D1922E59D48BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C00A36836AE2E2BC6393A9651398807</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B40699E7E8276F2DF34E4D1FD23F03A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A28D7DA654B0D822D70CD09E4D4BC33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1C4FC029F0C75EFDE1AEE299027FB39</key>
 		<dict>
 			<key>primary</key>
 			<true/>

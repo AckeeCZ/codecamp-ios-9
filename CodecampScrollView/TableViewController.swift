@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
+import Argo
+import SDWebImage
 
 private let cellId = "cellId"
 
@@ -209,6 +212,12 @@ extension TableViewController/*: UIScrollViewDelegate*/ {
 
 class TableViewController: UIViewController {
 
+    var people: [Person] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     override func loadView() {
         let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
 
@@ -222,25 +231,44 @@ class TableViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: cellId)
-//            tableView.rowHeight = UITableViewAutomaticDimension
-//            tableView.estimatedRowHeight = 100
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.estimatedRowHeight = 100
             tableView.snp_makeConstraints { make in
                 make.edges.equalTo(view)
             }
         }
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+    }
+
+    func loadData() {
+        guard let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
+            .flatMap({ NSData(contentsOfFile: $0) }),
+            let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
+        else { return }
+        let models: Decoded<[Person]> = decode(json)
+        if let e = models.error {
+            SVProgressHUD.showErrorWithStatus("\(e)")
+        }
+        people = models.value ?? []
+    }
 }
 
 extension TableViewController: UITableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return people.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
-        cell.thumbnailImageView.image = UIImage(named: "profile")
-        cell.titleLabel.text = "Lorem Ipsum"
-        cell.subtitleLabel.text = "Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc"
+        let model = people[indexPath.row]
+        cell.thumbnailImageView.sd_setImageWithURL(model.photo.flatMap { NSURL(string: $0) }) // must set NSAllowsArbitraryLoads
+        cell.titleLabel.text = model.name
+        cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
         return cell
     }
 }

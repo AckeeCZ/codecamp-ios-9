@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import Argo
 import SDWebImage
+import Firebase
 
 private let cellId = "cellId"
 
@@ -241,19 +242,42 @@ class TableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+
+        let reload: (AnyObject) -> () = { [weak self] json in
+            let models: Decoded<[Person]> = decode(json)
+            if let e = models.error {
+                SVProgressHUD.showErrorWithStatus("\(e)")
+            }
+            self?.people = models.value ?? []
+        }
+
+        switch dataSource {
+        case .Local:
+            if let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
+                .flatMap({ NSData(contentsOfFile: $0) }),
+                let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) {
+                    reload(json)
+            }
+        case .Firebase(let path):
+            firebaseHandle = Firebase(url: path).observeEventType(.Value) { (snapshot: FDataSnapshot!) in
+                guard let json = snapshot.value else { return }
+                reload(json)
+            }
+        }
     }
 
-    func loadData() {
-        guard let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
-            .flatMap({ NSData(contentsOfFile: $0) }),
-            let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
-        else { return }
-        let models: Decoded<[Person]> = decode(json)
-        if let e = models.error {
-            SVProgressHUD.showErrorWithStatus("\(e)")
+    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
+    enum DataSource {
+        case Local
+        case Firebase(String)
+    }
+
+    var firebaseHandle: UInt? = nil
+    deinit {
+        if case .Firebase(let path) = dataSource,
+            let handle = firebaseHandle {
+                Firebase(url: path).removeObserverWithHandle(handle)
         }
-        people = models.value ?? []
     }
 }
 

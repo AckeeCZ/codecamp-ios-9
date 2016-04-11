@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.3.1)
   - Argo (3.0.1)
   - Curry (2.2.0)
+  - Firebase (2.5.1)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Alamofire
   - Argo
   - Curry
+  - Firebase
   - SDWebImage
   - SnapKit
   - SVProgressHUD
@@ -20,6 +22,7 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Argo: 22c5d62b7967020a641468c91dc9488bea9523b8
   Curry: c22d80fff7f5a4b1bbd531455c3e2dbb099658a3
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4

@@ -222,8 +222,8 @@ class TableViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: cellId)
-//            tableView.rowHeight = UITableViewAutomaticDimension
-//            tableView.estimatedRowHeight = 100
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.estimatedRowHeight = 100
             tableView.snp_makeConstraints { make in
                 make.edges.equalTo(view)
             }

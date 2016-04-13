@@ -50,7 +50,7 @@ class CollectionViewCell: UICollectionViewCell {
             vStack.alignment = .Center
             vStack.snp_makeConstraints { make in
                 make.edges.equalTo(contentView)
-                make.width.equalTo(UIScreen.mainScreen().bounds.size.width)
+                make.width.equalTo(UIScreen.mainScreen().bounds.size.width).priority(999) // lower priority to make autolayout shut up in log
             }
         }
     }

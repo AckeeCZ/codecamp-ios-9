@@ -129,9 +129,9 @@ extension ScrollViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDecelerating(scrollView: UIScrollView) { }
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) { }
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) { }
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) { // this one is the only interesting one :)
-        targetContentOffset.memory = scrollView.center
-    }
+//    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) { // this one is the only interesting one :)
+//        targetContentOffset.memory = scrollView.center
+//    }
     func scrollViewDidScrollToTop(scrollView: UIScrollView) { }
     func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool { return true }
     // zoom

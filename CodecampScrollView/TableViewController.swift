@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import Argo
 import SDWebImage
+import Alamofire
 import Firebase
 
 private let cellId = "cellId"
@@ -258,6 +259,16 @@ class TableViewController: UIViewController {
                 let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) {
                     reload(json)
             }
+        case .HTTP(let baseUrl):
+            Alamofire.request(.GET, baseUrl + "/people")
+                .validate()
+                .responseJSON { response in
+                    if let e = response.result.error {
+                        SVProgressHUD.showErrorWithStatus("\(e)")
+                    }
+                    guard let json = response.result.value else { return }
+                    reload(json)
+            }
         case .Firebase(let path):
             firebaseHandle = Firebase(url: path).observeEventType(.Value) { (snapshot: FDataSnapshot!) in
                 guard let json = snapshot.value else { return }
@@ -265,10 +276,12 @@ class TableViewController: UIViewController {
             }
         }
     }
-
-    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
+//    var dataSource: DataSource = .Local
+    var dataSource: DataSource = .HTTP("http://private-8310d-petrsima.apiary-mock.com")
+//    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
     enum DataSource {
         case Local
+        case HTTP(String)
         case Firebase(String)
     }
 

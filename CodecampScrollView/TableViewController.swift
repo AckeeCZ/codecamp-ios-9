@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SVProgressHUD
+import Argo
+import SDWebImage
+import Alamofire
+import Firebase
 
 private let cellId = "cellId"
 
@@ -209,6 +214,12 @@ extension TableViewController/*: UIScrollViewDelegate*/ {
 
 class TableViewController: UIViewController {
 
+    var people: [Person] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     override func loadView() {
         let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
 
@@ -229,18 +240,72 @@ class TableViewController: UIViewController {
             }
         }
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let reload: (AnyObject) -> () = { [weak self] json in
+            let models: Decoded<[Person]> = decode(json)
+            if let e = models.error {
+                SVProgressHUD.showErrorWithStatus("\(e)")
+            }
+            self?.people = models.value ?? []
+        }
+
+        switch dataSource {
+        case .Local:
+            if let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
+                .flatMap({ NSData(contentsOfFile: $0) }),
+                let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) {
+                    reload(json)
+            }
+        case .HTTP(let baseUrl):
+            Alamofire.request(.GET, baseUrl + "/people")
+                .validate()
+                .responseJSON { response in
+                    if let e = response.result.error {
+                        SVProgressHUD.showErrorWithStatus("\(e)")
+                    }
+                    guard let json = response.result.value else { return }
+                    reload(json)
+            }
+        case .Firebase(let path):
+            firebaseHandle = Firebase(url: path).observeEventType(.Value) { (snapshot: FDataSnapshot!) in
+                guard let json = snapshot.value else { return }
+                reload(json)
+            }
+        }
+    }
+//    var dataSource: DataSource = .Local
+    var dataSource: DataSource = .HTTP("http://private-8310d-petrsima.apiary-mock.com")
+//    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
+    enum DataSource {
+        case Local
+        case HTTP(String)
+        case Firebase(String)
+    }
+
+    var firebaseHandle: UInt? = nil
+    deinit {
+        if case .Firebase(let path) = dataSource,
+            let handle = firebaseHandle {
+                Firebase(url: path).removeObserverWithHandle(handle)
+        }
+    }
 }
 
 extension TableViewController: UITableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return people.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
-        cell.thumbnailImageView.image = UIImage(named: "profile")
-        cell.titleLabel.text = "Lorem Ipsum"
-        cell.subtitleLabel.text = "Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc Dolor sit amet etc etc"
+        let model = people[indexPath.row]
+        cell.thumbnailImageView.sd_setImageWithURL(model.photo.flatMap { NSURL(string: $0) }) // must set NSAllowsArbitraryLoads
+        cell.titleLabel.text = model.name
+        cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
         return cell
     }
 }

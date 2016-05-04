@@ -11,7 +11,7 @@ public enum PersonAttributes: String {
 }
 
 public enum PersonRelationships: String {
-    case adresses = "adresses"
+    case addresses = "addresses"
 }
 
 public class _Person: NSManagedObject {
@@ -51,34 +51,34 @@ public class _Person: NSManagedObject {
     // MARK: - Relationships
 
     @NSManaged public
-    var adresses: NSSet
+    var addresses: NSSet
 
 }
 
 extension _Person {
 
-    func addAdresses(objects: NSSet) {
-        let mutable = self.adresses.mutableCopy() as! NSMutableSet
+    func addAddresses(objects: NSSet) {
+        let mutable = self.addresses.mutableCopy() as! NSMutableSet
         mutable.unionSet(objects as Set<NSObject>)
-        self.adresses = mutable.copy() as! NSSet
+        self.addresses = mutable.copy() as! NSSet
     }
 
-    func removeAdresses(objects: NSSet) {
-        let mutable = self.adresses.mutableCopy() as! NSMutableSet
+    func removeAddresses(objects: NSSet) {
+        let mutable = self.addresses.mutableCopy() as! NSMutableSet
         mutable.minusSet(objects as Set<NSObject>)
-        self.adresses = mutable.copy() as! NSSet
+        self.addresses = mutable.copy() as! NSSet
     }
 
-    func addAdressesObject(value: Address) {
-        let mutable = self.adresses.mutableCopy() as! NSMutableSet
+    func addAddressesObject(value: Address) {
+        let mutable = self.addresses.mutableCopy() as! NSMutableSet
         mutable.addObject(value)
-        self.adresses = mutable.copy() as! NSSet
+        self.addresses = mutable.copy() as! NSSet
     }
 
-    func removeAdressesObject(value: Address) {
-        let mutable = self.adresses.mutableCopy() as! NSMutableSet
+    func removeAddressesObject(value: Address) {
+        let mutable = self.addresses.mutableCopy() as! NSMutableSet
         mutable.removeObject(value)
-        self.adresses = mutable.copy() as! NSSet
+        self.addresses = mutable.copy() as! NSSet
     }
 
 }

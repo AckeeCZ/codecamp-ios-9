@@ -21,3 +21,9 @@ extension UIColor {
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
 }
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        return indices ~= index ? self[index]: nil
+    }
+}

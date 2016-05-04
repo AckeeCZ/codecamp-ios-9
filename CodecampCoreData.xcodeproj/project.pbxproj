@@ -21,47 +21,51 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		790BF4F81CD9F19E00090D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4E71CD9F19E00090D39 /* AppDelegate.swift */; };
 		790BF4F91CD9F19E00090D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790BF4E81CD9F19E00090D39 /* Assets.xcassets */; };
 		790BF4FA1CD9F19E00090D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790BF4EA1CD9F19E00090D39 /* LaunchScreen.storyboard */; };
-		790BF4FB1CD9F19E00090D39 /* CodecampDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4EC1CD9F19E00090D39 /* CodecampDataModel.xcdatamodeld */; };
-		790BF4FC1CD9F19E00090D39 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4EE1CD9F19E00090D39 /* CollectionViewCell.swift */; };
-		790BF4FD1CD9F19E00090D39 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4EF1CD9F19E00090D39 /* CollectionViewController.swift */; };
-		790BF4FE1CD9F19E00090D39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BF4F01CD9F19E00090D39 /* Info.plist */; };
-		790BF4FF1CD9F19E00090D39 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F11CD9F19E00090D39 /* MenuViewController.swift */; };
-		790BF5001CD9F19E00090D39 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F21CD9F19E00090D39 /* Model.swift */; };
-		790BF5011CD9F19E00090D39 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 790BF4F31CD9F19E00090D39 /* people.json */; };
-		790BF5021CD9F19E00090D39 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F41CD9F19E00090D39 /* ScrollViewController.swift */; };
-		790BF5031CD9F19E00090D39 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F51CD9F19E00090D39 /* TableViewCell.swift */; };
-		790BF5041CD9F19E00090D39 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F61CD9F19E00090D39 /* TableViewController.swift */; };
-		790BF5051CD9F19E00090D39 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF4F71CD9F19E00090D39 /* Utils.swift */; };
 		790BF50A1CD9F34500090D39 /* _Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF5081CD9F34500090D39 /* _Address.swift */; };
 		790BF50B1CD9F34500090D39 /* _Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF5091CD9F34500090D39 /* _Person.swift */; };
 		790BF50E1CD9F35300090D39 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF50C1CD9F35300090D39 /* Address.swift */; };
 		790BF50F1CD9F35300090D39 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790BF50D1CD9F35300090D39 /* Person.swift */; };
+		79F639321CDA071D000CAAD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F639231CDA071D000CAAD2 /* AppDelegate.swift */; };
+		79F639331CDA071D000CAAD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F639241CDA071D000CAAD2 /* Assets.xcassets */; };
+		79F639341CDA071D000CAAD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F639261CDA071D000CAAD2 /* LaunchScreen.storyboard */; };
+		79F639351CDA071D000CAAD2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F639281CDA071D000CAAD2 /* CollectionViewCell.swift */; };
+		79F639361CDA071D000CAAD2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F639291CDA071D000CAAD2 /* CollectionViewController.swift */; };
+		79F639371CDA071D000CAAD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79F6392A1CDA071D000CAAD2 /* Info.plist */; };
+		79F639381CDA071D000CAAD2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6392B1CDA071D000CAAD2 /* MenuViewController.swift */; };
+		79F639391CDA071D000CAAD2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6392C1CDA071D000CAAD2 /* Model.swift */; };
+		79F6393A1CDA071D000CAAD2 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 79F6392D1CDA071D000CAAD2 /* people.json */; };
+		79F6393B1CDA071D000CAAD2 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6392E1CDA071D000CAAD2 /* ScrollViewController.swift */; };
+		79F6393C1CDA071D000CAAD2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6392F1CDA071D000CAAD2 /* TableViewCell.swift */; };
+		79F6393D1CDA071D000CAAD2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F639301CDA071D000CAAD2 /* TableViewController.swift */; };
+		79F6393E1CDA071D000CAAD2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F639311CDA071D000CAAD2 /* Utils.swift */; };
+		79FDEE231CDA0C7700B60F18 /* CodecampDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79FDEE211CDA0C7700B60F18 /* CodecampDataModel.xcdatamodeld */; };
 		FF09B7769975FA839C5AE4CD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12BE2507954600B16EF0CB4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		790BF4E71CD9F19E00090D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Source/AppDelegate.swift; sourceTree = "<group>"; };
 		790BF4E81CD9F19E00090D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = "<group>"; };
 		790BF4EB1CD9F19E00090D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		790BF4ED1CD9F19E00090D39 /* CodecampDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodecampDataModel.xcdatamodel; sourceTree = "<group>"; };
-		790BF4EE1CD9F19E00090D39 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../Source/CollectionViewCell.swift; sourceTree = "<group>"; };
-		790BF4EF1CD9F19E00090D39 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = ../Source/CollectionViewController.swift; sourceTree = "<group>"; };
-		790BF4F01CD9F19E00090D39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Source/Info.plist; sourceTree = "<group>"; };
-		790BF4F11CD9F19E00090D39 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../Source/MenuViewController.swift; sourceTree = "<group>"; };
-		790BF4F21CD9F19E00090D39 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../Source/Model.swift; sourceTree = "<group>"; };
-		790BF4F31CD9F19E00090D39 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = people.json; path = ../Source/people.json; sourceTree = "<group>"; };
-		790BF4F41CD9F19E00090D39 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewController.swift; path = ../Source/ScrollViewController.swift; sourceTree = "<group>"; };
-		790BF4F51CD9F19E00090D39 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../Source/TableViewCell.swift; sourceTree = "<group>"; };
-		790BF4F61CD9F19E00090D39 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../Source/TableViewController.swift; sourceTree = "<group>"; };
-		790BF4F71CD9F19E00090D39 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../Source/Utils.swift; sourceTree = "<group>"; };
 		790BF5081CD9F34500090D39 /* _Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Address.swift; path = Source/_Address.swift; sourceTree = SOURCE_ROOT; };
 		790BF5091CD9F34500090D39 /* _Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Person.swift; path = Source/_Person.swift; sourceTree = SOURCE_ROOT; };
 		790BF50C1CD9F35300090D39 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Source/Address.swift; sourceTree = SOURCE_ROOT; };
 		790BF50D1CD9F35300090D39 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Source/Person.swift; sourceTree = SOURCE_ROOT; };
 		79165BA91CBA9B01000F6294 /* CodecampCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodecampCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F639231CDA071D000CAAD2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		79F639241CDA071D000CAAD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		79F639271CDA071D000CAAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79F639281CDA071D000CAAD2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = Source/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		79F639291CDA071D000CAAD2 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = Source/CollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		79F6392A1CDA071D000CAAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		79F6392B1CDA071D000CAAD2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Source/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		79F6392C1CDA071D000CAAD2 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = SOURCE_ROOT; };
+		79F6392D1CDA071D000CAAD2 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = people.json; path = Source/people.json; sourceTree = SOURCE_ROOT; };
+		79F6392E1CDA071D000CAAD2 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewController.swift; path = Source/ScrollViewController.swift; sourceTree = SOURCE_ROOT; };
+		79F6392F1CDA071D000CAAD2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = Source/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		79F639301CDA071D000CAAD2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Source/TableViewController.swift; sourceTree = SOURCE_ROOT; };
+		79F639311CDA071D000CAAD2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/Utils.swift; sourceTree = SOURCE_ROOT; };
+		79FDEE221CDA0C7700B60F18 /* CodecampDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodecampDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9564DA748F5B123F4528565C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0B92132C8B2A01B20DB26D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F12BE2507954600B16EF0CB4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +122,12 @@
 		79165BA01CBA9B01000F6294 = {
 			isa = PBXGroup;
 			children = (
+				79FDEE211CDA0C7700B60F18 /* CodecampDataModel.xcdatamodeld */,
 				79165BAB1CBA9B01000F6294 /* Source */,
+				79F6392D1CDA071D000CAAD2 /* people.json */,
+				79F639241CDA071D000CAAD2 /* Assets.xcassets */,
+				79F639251CDA071D000CAAD2 /* Base.lproj */,
+				79F6392A1CDA071D000CAAD2 /* Info.plist */,
 				790BF4E81CD9F19E00090D39 /* Assets.xcassets */,
 				790BF4E91CD9F19E00090D39 /* Base.lproj */,
 				79165BAA1CBA9B01000F6294 /* Products */,
@@ -138,13 +147,10 @@
 		79165BAB1CBA9B01000F6294 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				790BF4E71CD9F19E00090D39 /* AppDelegate.swift */,
-				790BF4EC1CD9F19E00090D39 /* CodecampDataModel.xcdatamodeld */,
+				79F639231CDA071D000CAAD2 /* AppDelegate.swift */,
+				79F639311CDA071D000CAAD2 /* Utils.swift */,
 				795579FE1CBB152900B02D3B /* View */,
 				79557A001CBB157700B02D3B /* Model */,
-				790BF4F01CD9F19E00090D39 /* Info.plist */,
-				790BF4F31CD9F19E00090D39 /* people.json */,
-				790BF4F71CD9F19E00090D39 /* Utils.swift */,
 			);
 			name = Source;
 			path = CodecampScrollView;
@@ -153,12 +159,12 @@
 		795579FE1CBB152900B02D3B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				790BF4EE1CD9F19E00090D39 /* CollectionViewCell.swift */,
-				790BF4EF1CD9F19E00090D39 /* CollectionViewController.swift */,
-				790BF4F11CD9F19E00090D39 /* MenuViewController.swift */,
-				790BF4F41CD9F19E00090D39 /* ScrollViewController.swift */,
-				790BF4F51CD9F19E00090D39 /* TableViewCell.swift */,
-				790BF4F61CD9F19E00090D39 /* TableViewController.swift */,
+				79F639281CDA071D000CAAD2 /* CollectionViewCell.swift */,
+				79F639291CDA071D000CAAD2 /* CollectionViewController.swift */,
+				79F6392B1CDA071D000CAAD2 /* MenuViewController.swift */,
+				79F6392E1CDA071D000CAAD2 /* ScrollViewController.swift */,
+				79F6392F1CDA071D000CAAD2 /* TableViewCell.swift */,
+				79F639301CDA071D000CAAD2 /* TableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -166,11 +172,20 @@
 		79557A001CBB157700B02D3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				790BF4F21CD9F19E00090D39 /* Model.swift */,
+				79F6392C1CDA071D000CAAD2 /* Model.swift */,
 				790BF5061CD9F1FB00090D39 /* Managed */,
 			);
 			name = Model;
 			sourceTree = "<group>";
+		};
+		79F639251CDA071D000CAAD2 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				79F639261CDA071D000CAAD2 /* LaunchScreen.storyboard */,
+			);
+			name = Base.lproj;
+			path = Source/Base.lproj;
+			sourceTree = SOURCE_ROOT;
 		};
 		FCF57213C5B407E46FDF7842 /* Pods */ = {
 			isa = PBXGroup;
@@ -246,10 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				790BF5011CD9F19E00090D39 /* people.json in Resources */,
 				790BF4F91CD9F19E00090D39 /* Assets.xcassets in Resources */,
+				79F639341CDA071D000CAAD2 /* LaunchScreen.storyboard in Resources */,
+				79F6393A1CDA071D000CAAD2 /* people.json in Resources */,
+				79F639331CDA071D000CAAD2 /* Assets.xcassets in Resources */,
+				79F639371CDA071D000CAAD2 /* Info.plist in Resources */,
 				790BF4FA1CD9F19E00090D39 /* LaunchScreen.storyboard in Resources */,
-				790BF4FE1CD9F19E00090D39 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,19 +339,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				790BF4FD1CD9F19E00090D39 /* CollectionViewController.swift in Sources */,
-				790BF4FC1CD9F19E00090D39 /* CollectionViewCell.swift in Sources */,
+				79F639321CDA071D000CAAD2 /* AppDelegate.swift in Sources */,
 				790BF50E1CD9F35300090D39 /* Address.swift in Sources */,
-				790BF4F81CD9F19E00090D39 /* AppDelegate.swift in Sources */,
+				79F6393D1CDA071D000CAAD2 /* TableViewController.swift in Sources */,
+				79FDEE231CDA0C7700B60F18 /* CodecampDataModel.xcdatamodeld in Sources */,
+				79F6393E1CDA071D000CAAD2 /* Utils.swift in Sources */,
 				790BF50F1CD9F35300090D39 /* Person.swift in Sources */,
-				790BF4FF1CD9F19E00090D39 /* MenuViewController.swift in Sources */,
-				790BF5021CD9F19E00090D39 /* ScrollViewController.swift in Sources */,
-				790BF5031CD9F19E00090D39 /* TableViewCell.swift in Sources */,
+				79F639351CDA071D000CAAD2 /* CollectionViewCell.swift in Sources */,
+				79F639381CDA071D000CAAD2 /* MenuViewController.swift in Sources */,
+				79F639391CDA071D000CAAD2 /* Model.swift in Sources */,
+				79F639361CDA071D000CAAD2 /* CollectionViewController.swift in Sources */,
+				79F6393B1CDA071D000CAAD2 /* ScrollViewController.swift in Sources */,
 				790BF50B1CD9F34500090D39 /* _Person.swift in Sources */,
-				790BF5041CD9F19E00090D39 /* TableViewController.swift in Sources */,
-				790BF4FB1CD9F19E00090D39 /* CodecampDataModel.xcdatamodeld in Sources */,
-				790BF5001CD9F19E00090D39 /* Model.swift in Sources */,
-				790BF5051CD9F19E00090D39 /* Utils.swift in Sources */,
+				79F6393C1CDA071D000CAAD2 /* TableViewCell.swift in Sources */,
 				790BF50A1CD9F34500090D39 /* _Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +363,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				790BF4EB1CD9F19E00090D39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		79F639261CDA071D000CAAD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79F639271CDA071D000CAAD2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -486,6 +511,7 @@
 				790BF4E51CD9F08300090D39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79165BA41CBA9B01000F6294 /* Build configuration list for PBXProject "CodecampCoreData" */ = {
 			isa = XCConfigurationList;
@@ -508,14 +534,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		790BF4EC1CD9F19E00090D39 /* CodecampDataModel.xcdatamodeld */ = {
+		79FDEE211CDA0C7700B60F18 /* CodecampDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				790BF4ED1CD9F19E00090D39 /* CodecampDataModel.xcdatamodel */,
+				79FDEE221CDA0C7700B60F18 /* CodecampDataModel.xcdatamodel */,
 			);
-			currentVersion = 790BF4ED1CD9F19E00090D39 /* CodecampDataModel.xcdatamodel */;
+			currentVersion = 79FDEE221CDA0C7700B60F18 /* CodecampDataModel.xcdatamodel */;
 			name = CodecampDataModel.xcdatamodeld;
-			path = ../Source/CodecampDataModel.xcdatamodeld;
+			path = Source/CodecampDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

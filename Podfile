@@ -11,3 +11,4 @@ pod 'SVProgressHUD'
 pod 'Firebase'
 pod 'SwiftyJSON'
 pod 'MagicalRecord'
+

@@ -12,205 +12,10 @@ import Argo
 import SDWebImage
 import Alamofire
 import Firebase
+import MagicalRecord
+import SwiftyJSON
 
 private let cellId = "cellId"
-
-//class TableViewController: UIViewController {
-//
-//    override func loadView() {
-//        super.loadView()
-//
-//        let tableView = UITableView(frame: .zero, style: .Plain)
-//        view.addSubview(tableView)
-//        self.tableView = tableView
-//    }
-//
-//    weak var tableView: UITableView! {
-//        didSet {
-//            tableView.dataSource = self
-//            tableView.delegate = self
-//            tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellId)
-//            tableView.snp_makeConstraints { make in
-//                make.edges.equalTo(view)
-//            }
-//        }
-//    }
-//}
-//
-//extension TableViewController: UITableViewDataSource {
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 100
-//    }
-//
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
-//        cell.imageView?.image = UIImage(named: "profile")
-//        cell.textLabel?.text = "Lorem Ipsum"
-//        return cell
-//    }
-//}
-
-extension TableViewController: UITableViewDelegate {
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, accessoryTypeForRowWithIndexPath indexPath: NSIndexPath) -> UITableViewCellAccessoryType {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-//    }
-//    func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-//        <#code#>
-//    }
-//    func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
-//        <#code#>
-//    }
-//    //No tableViewDidReload, use dispatch_async
-}
-
-extension TableViewController/*: UIScrollViewDelegate*/ {
-    // scroll
-//    func scrollViewDidScroll(scrollView: UIScrollView) {
-//        guard scrollView == tableView,
-//            let indexPath = tableView.indexPathForRowAtPoint(tableView.convertPoint(view.center, fromView: view)),
-//            let cell = tableView.cellForRowAtIndexPath(indexPath) else { return }
-//        cell.backgroundColor = .gayColor()
-//    }
-//    func scrollViewWillBeginDragging(scrollView: UIScrollView) { }
-//    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) { }
-//    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) { }
-//    func scrollViewDidEndDecelerating(scrollView: UIScrollView) { }
-//    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) { }
-//    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        guard scrollView == tableView,
-//            let indexPath = tableView.indexPathForRowAtPoint(targetContentOffset.memory)
-//            else { return }
-//        targetContentOffset.memory = tableView.rectForRowAtIndexPath(indexPath).origin //doesnt work
-//    }
-//    func scrollViewDidScrollToTop(scrollView: UIScrollView) { }
-//    func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool { return true }
-//    // zoom
-//    func scrollViewDidZoom(scrollView: UIScrollView) { }
-//    func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) { }
-//    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) { }
-}
 
 class TableViewController: UIViewController {
 
@@ -244,12 +49,36 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let reload: (AnyObject) -> () = { [weak self] json in
-//            let models: Decoded<[Person]> = decode(json)
-//            if let e = models.error {
-//                SVProgressHUD.showErrorWithStatus("\(e)")
+        try? fetchedResultsController.performFetch()
+
+        let persistJsonToCoreData: (AnyObject) -> () = { [weak self] json in
+
+//            //example of pure CoreData code (without MagicalRecord)
+//            //-------------
+//            let context = NSManagedObjectContext.MR_defaultContext() //this context is taken from MR core data stack, get appropriate context here if using pure CoreData
+//            guard let personDescription = NSEntityDescription.entityForName("Person", inManagedObjectContext: context) else { return }
+//            let newPerson = Person(entity: personDescription, insertIntoManagedObjectContext: context)
+//            newPerson.name = "getNameFromJson..."
+//            try? context.save() //synchronous! You cant even call this from another thread or app will crash/misbehave. To save asynchronously, you would need to create another context for a background thread, then save there, observe save notification and merge changes to your app's main context.
+//             //----------------
+
+            // example of MagicalRecord code
+            // -----------------------------
+//            MagicalRecord.saveWithBlock { localContext in
+//                guard let newPerson = Person.MR_createInContext(localContext) else { return }
+//                newPerson.name = "getNameFromJson..."
+//
+//                // thats it.
+//                // all the changes made here will be saved to MR_defaultContext and persited to disk when this closure exits
 //            }
-//            self?.people = models.value ?? []
+            // -----------------------------
+
+            // example of MagicalRecord import code
+            MagicalRecord.saveWithBlock { localContext in
+                guard let personsJson = json as? [[NSObject: AnyObject]] else { return }
+
+                let persons = Person.MR_importFromArray(personsJson, inContext: localContext)
+            }
         }
 
         switch dataSource {
@@ -257,7 +86,7 @@ class TableViewController: UIViewController {
             if let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
                 .flatMap({ NSData(contentsOfFile: $0) }),
                 let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) {
-                    reload(json)
+                    persistJsonToCoreData(json)
             }
         case .HTTP(let baseUrl):
             Alamofire.request(.GET, baseUrl + "/people")
@@ -267,12 +96,12 @@ class TableViewController: UIViewController {
                         SVProgressHUD.showErrorWithStatus("\(e)")
                     }
                     guard let json = response.result.value else { return }
-                    reload(json)
+                    persistJsonToCoreData(json)
             }
         case .Firebase(let path):
             firebaseHandle = Firebase(url: path).observeEventType(.Value) { (snapshot: FDataSnapshot!) in
                 guard let json = snapshot.value else { return }
-                reload(json)
+                persistJsonToCoreData(json)
             }
         }
     }
@@ -292,21 +121,52 @@ class TableViewController: UIViewController {
                 Firebase(url: path).removeObserverWithHandle(handle)
         }
     }
+
+    lazy var fetchedResultsController: NSFetchedResultsController = { [unowned self] in
+        return Person.MR_fetchAllSortedBy("name", ascending: true, withPredicate: nil, groupBy: nil, delegate: self)
+    }()
+}
+
+extension TableViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.endUpdates()
+    }
+
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .Insert:
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Automatic)
+        case .Update:
+            tableView.reloadRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+        case .Delete:
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+        case .Move:
+            tableView.moveRowAtIndexPath(indexPath!, toIndexPath: newIndexPath!)
+        }
+    }
 }
 
 extension TableViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        return fetchedResultsController.sections?[safe: section]?.objects?.count ?? 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
-//        let model = people[indexPath.row]
-//        cell.thumbnailImageView.sd_setImageWithURL(model.photo.flatMap { NSURL(string: $0) }) // must set NSAllowsArbitraryLoads
-//        cell.titleLabel.text = model.name
-//        cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
-//        return cell
-        return UITableViewCell()
+        guard let model = fetchedResultsController.objectAtIndexPath(indexPath) as? Person
+        else { return UITableViewCell() }
+
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
+        cell.thumbnailImageView.sd_setImageWithURL(model.photo.flatMap { NSURL(string: $0) }) // must set NSAllowsArbitraryLoads
+        cell.titleLabel.text = model.name
+        cell.subtitleLabel.text = model.addresses.flatMap { $0.text }.reduce("") { $0 + ", " + $1 }
+        return cell
     }
+}
+
+extension TableViewController: UITableViewDelegate {
 }

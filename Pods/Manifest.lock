@@ -3,6 +3,9 @@ PODS:
   - Argo (3.0.1)
   - Curry (2.2.0)
   - Firebase (2.5.1)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - Argo
   - Curry
   - Firebase
+  - MagicalRecord
   - SDWebImage
   - SnapKit
   - SVProgressHUD
@@ -25,6 +29,7 @@ SPEC CHECKSUMS:
   Argo: 22c5d62b7967020a641468c91dc9488bea9523b8
   Curry: c22d80fff7f5a4b1bbd531455c3e2dbb099658a3
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4

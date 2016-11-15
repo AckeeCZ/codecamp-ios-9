@@ -11,6 +11,7 @@ import SVProgressHUD
 import Argo
 import SDWebImage
 import Alamofire
+import Marshal
 //import Firebase
 
 private let cellId = "cellId"
@@ -245,11 +246,22 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
 
         let reload: (AnyObject) -> () = { [weak self] json in
-            let models: Decoded<[Person]> = decode(json)
-            if let e = models.error {
-                SVProgressHUD.showError(withStatus: "\(e)")
+            //argo
+//            let models: Decoded<[Person]> = decode(json) //argo
+//            if let e = models.error {
+//                SVProgressHUD.showError(withStatus: "\(e)")
+//            }
+//            self?.people = models.value ?? []
+            //marshal
+            do {
+                let dummyKey = "dummyKey"
+                let models: [Person] = try [dummyKey: json].value(for: dummyKey)
+                self?.people = models
+            }catch {
+                  SVProgressHUD.showError(withStatus: "\(error)")
             }
-            self?.people = models.value ?? []
+            
+            
         }
 
         switch dataSource {

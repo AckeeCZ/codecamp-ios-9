@@ -13,5 +13,5 @@ pod 'SVProgressHUD'
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'SwiftyJSON'
-
+pod 'Marshal'
 end

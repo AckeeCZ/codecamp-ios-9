@@ -29,6 +29,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - Marshal (1.0.0)
   - Runes (4.0.1)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - Curry
   - Firebase
   - Firebase/Database
+  - Marshal
   - SDWebImage
   - SnapKit
   - SVProgressHUD
@@ -60,12 +62,13 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  Marshal: a3c5c5dbd388112edf3cdabb718f2b4cfe48658a
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 6a9361fca37b2e39229ca18123134fcef1e0a5ac
+PODFILE CHECKSUM: 1b8a28137a0eb88d1f02e7c7c5234afea03671a8
 
 COCOAPODS: 1.2.0.beta.1

@@ -14,6 +14,7 @@
 		79557A021CBB168900B02D3B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79557A011CBB168900B02D3B /* Model.swift */; };
 		79557A061CBB29C900B02D3B /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 79557A051CBB29C900B02D3B /* people.json */; };
 		7988D6471CBEFADD00300DC7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D6461CBEFADD00300DC7 /* MenuViewController.swift */; };
+		79995BC51DDAD98700E2ADB2 /* Model+Marshal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79995BC41DDAD98700E2ADB2 /* Model+Marshal.swift */; };
 		79DE82441CBAA7A2003749DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82431CBAA7A2003749DB /* TableViewController.swift */; };
 		79DE82461CBAA7B8003749DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82451CBAA7B8003749DB /* TableViewCell.swift */; };
 		79DE82481CBAEC9D003749DB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE82471CBAEC9D003749DB /* Utils.swift */; };
@@ -32,6 +33,7 @@
 		79557A011CBB168900B02D3B /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		79557A051CBB29C900B02D3B /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		7988D6461CBEFADD00300DC7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		79995BC41DDAD98700E2ADB2 /* Model+Marshal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Marshal.swift"; sourceTree = "<group>"; };
 		79DE82431CBAA7A2003749DB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		79DE82451CBAA7B8003749DB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		79DE82471CBAEC9D003749DB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				79557A011CBB168900B02D3B /* Model.swift */,
+				79995BC41DDAD98700E2ADB2 /* Model+Marshal.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79995BC51DDAD98700E2ADB2 /* Model+Marshal.swift in Sources */,
 				79DE824A1CBB087D003749DB /* CollectionViewController.swift in Sources */,
 				79DE82481CBAEC9D003749DB /* Utils.swift in Sources */,
 				79165BAF1CBA9B01000F6294 /* ScrollViewController.swift in Sources */,

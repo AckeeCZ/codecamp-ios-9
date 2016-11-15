@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2A27E11DDAF5EB005BBFB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */; };
 		79165BAD1CBA9B01000F6294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAC1CBA9B01000F6294 /* AppDelegate.swift */; };
 		79165BAF1CBA9B01000F6294 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */; };
 		79165BB41CBA9B01000F6294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79165BB31CBA9B01000F6294 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79165BA91CBA9B01000F6294 /* CodecampScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodecampScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79165BAC1CBA9B01000F6294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				79165BB31CBA9B01000F6294 /* Assets.xcassets */,
 				79165BB51CBA9B01000F6294 /* LaunchScreen.storyboard */,
 				79165BB81CBA9B01000F6294 /* Info.plist */,
+				2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */,
 				79557A051CBB29C900B02D3B /* people.json */,
 				79DE82471CBAEC9D003749DB /* Utils.swift */,
 			);
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79165BB71CBA9B01000F6294 /* LaunchScreen.storyboard in Resources */,
+				2C2A27E11DDAF5EB005BBFB8 /* GoogleService-Info.plist in Resources */,
 				79165BB41CBA9B01000F6294 /* Assets.xcassets in Resources */,
 				79557A061CBB29C900B02D3B /* people.json in Resources */,
 			);

@@ -8,11 +8,12 @@
 
 import UIKit
 import SVProgressHUD
-import Argo
+//import Argo
 import SDWebImage
 import Alamofire
 import Marshal
-//import Firebase
+import Firebase
+import SwiftyJSON
 
 private let cellId = "cellId"
 
@@ -257,10 +258,9 @@ class TableViewController: UIViewController {
                 let dummyKey = "dummyKey"
                 let models: [Person] = try [dummyKey: json].value(for: dummyKey)
                 self?.people = models
-            }catch {
+            }catch{
                   SVProgressHUD.showError(withStatus: "\(error)")
             }
-            
             
         }
 
@@ -281,25 +281,25 @@ class TableViewController: UIViewController {
                     guard let json = response.result.value else { return }
                     reload(json as AnyObject)
             }
-//        case .firebase(let path):
-//            firebaseHandle = FIRDatabaseReference(url: path)//.observe(.value) { (snapshot: FIRDataSnapshot!) in
-//                guard let json = snapshot.value else { return }
-//                reload(json)
-//            }
+        case .firebase:
+             FIRDatabase.database().reference().observe(.value) { (snapshot: FIRDataSnapshot!) in
+                guard let json = snapshot.value else { return }
+                reload(json as AnyObject)
+            }
         }
     }
-    var dataSource: DataSource = .local
+//    var dataSource: DataSource = .local
 //    var dataSource: DataSource = .http("http://private-8310d-petrsima.apiary-mock.com")
-//    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
+    var dataSource: DataSource = .firebase
     enum DataSource {
         case local
         case http(String)
-//        case firebase(String)
+        case firebase
     }
 
 //    var firebaseHandle: UInt? = nil
     deinit {
-//        if case .firebase(let path) = dataSource,
+//        if case .firebase = dataSource,
 //            let handle = firebaseHandle {
 //                Firebase(url: path).removeObserver(withHandle: handle)
 //        }

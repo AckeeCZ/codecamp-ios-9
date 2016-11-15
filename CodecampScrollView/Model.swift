@@ -21,7 +21,7 @@ import Runes
 //extension Person: Decodable {
 //    static func decode(_ json: JSON) -> Decoded<Person> {
 //        return curry(self.init)
-//        <^> json <| "name"
+//        <^> json <| "namehgfdljkhfdhjlksdlkj"
 //        <*> json <|? "photo"
 //        <*> json <|| "addresses"
 //        <*> (json <| "gender" <|> pure(.thai))

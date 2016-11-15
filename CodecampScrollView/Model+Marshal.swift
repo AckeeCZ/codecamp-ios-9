@@ -21,7 +21,7 @@ extension Person: Unmarshaling {
             name: try object.value(for: "name"),
             photo: try object.value(for: "photo"),
             addresses: try object.value(for: "addresses"),
-            gender: try object.value(for: "gender")
+            gender: (try object.value(for: "gender")) ?? .thai
         )
     }
 }
@@ -39,7 +39,7 @@ extension Address: Unmarshaling {
         self.init(
             city: try object.value(for: "city"),
             street: try object.value(for: "street"),
-            type: try object.value(for: "type")
+            type: .residential//try object.value(for: "type")
         )
     }
 }

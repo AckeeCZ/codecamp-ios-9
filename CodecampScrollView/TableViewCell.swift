@@ -43,30 +43,30 @@ class TableViewCell: UITableViewCell {
     }
     weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.textAlignment = .Center
+            titleLabel.textAlignment = .center
         }
     }
 
     weak var subtitleLabel: UILabel! {
         didSet {
             subtitleLabel.numberOfLines = 0
-            subtitleLabel.textAlignment = .Center
+            subtitleLabel.textAlignment = .center
         }
     }
 
     weak var labelsVStack: UIStackView! {
         didSet {
-            labelsVStack.axis = .Vertical
+            labelsVStack.axis = .vertical
             labelsVStack.spacing = 10
-            labelsVStack.alignment = .Center
+            labelsVStack.alignment = .center
             labelsVStack.snp_makeConstraints { make in
             }
         }
     }
     weak var topLevelHStack: UIStackView! {
         didSet {
-            topLevelHStack.axis = .Horizontal
-            topLevelHStack.alignment = .Top
+            topLevelHStack.axis = .horizontal
+            topLevelHStack.alignment = .top
             topLevelHStack.spacing = 10
             topLevelHStack.snp_makeConstraints { make in
                 make.edges.equalTo(contentView).inset(10)

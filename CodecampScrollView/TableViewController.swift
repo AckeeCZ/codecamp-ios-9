@@ -11,7 +11,7 @@ import SVProgressHUD
 import Argo
 import SDWebImage
 import Alamofire
-import Firebase
+//import Firebase
 
 private let cellId = "cellId"
 
@@ -221,9 +221,9 @@ class TableViewController: UIViewController {
     }
 
     override func loadView() {
-        let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
+        let view = UIView(); view.backgroundColor = .white; view.isOpaque = true; self.view = view
 
-        let tableView = UITableView(frame: .zero, style: .Plain)
+        let tableView = UITableView(frame: .zero, style: .plain)
         view.addSubview(tableView)
         self.tableView = tableView
     }
@@ -232,7 +232,7 @@ class TableViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
-            tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: cellId)
+            tableView.register(TableViewCell.self, forCellReuseIdentifier: cellId)
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = 100
             tableView.snp_makeConstraints { make in
@@ -247,63 +247,63 @@ class TableViewController: UIViewController {
         let reload: (AnyObject) -> () = { [weak self] json in
             let models: Decoded<[Person]> = decode(json)
             if let e = models.error {
-                SVProgressHUD.showErrorWithStatus("\(e)")
+                SVProgressHUD.showError(withStatus: "\(e)")
             }
             self?.people = models.value ?? []
         }
 
         switch dataSource {
-        case .Local:
-            if let jsonData = NSBundle.mainBundle().pathForResource("people", ofType: "json")
-                .flatMap({ NSData(contentsOfFile: $0) }),
-                let json = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) {
-                    reload(json)
+        case .local:
+            if let jsonData = Bundle.main.path(forResource: "people", ofType: "json")
+                .flatMap({ (try? Data(contentsOf: URL(fileURLWithPath: $0))) }),
+                let json = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) {
+                    reload(json as AnyObject)
             }
-        case .HTTP(let baseUrl):
-            Alamofire.request(.GET, baseUrl + "/people")
+        case .http(let baseUrl):
+            Alamofire.request(baseUrl + "/people", method: .get)
                 .validate()
                 .responseJSON { response in
                     if let e = response.result.error {
-                        SVProgressHUD.showErrorWithStatus("\(e)")
+                        SVProgressHUD.showError(withStatus: "\(e)")
                     }
                     guard let json = response.result.value else { return }
-                    reload(json)
+                    reload(json as AnyObject)
             }
-        case .Firebase(let path):
-            firebaseHandle = Firebase(url: path).observeEventType(.Value) { (snapshot: FDataSnapshot!) in
-                guard let json = snapshot.value else { return }
-                reload(json)
-            }
+//        case .firebase(let path):
+//            firebaseHandle = FIRDatabaseReference(url: path)//.observe(.value) { (snapshot: FIRDataSnapshot!) in
+//                guard let json = snapshot.value else { return }
+//                reload(json)
+//            }
         }
     }
-//    var dataSource: DataSource = .Local
-    var dataSource: DataSource = .HTTP("http://private-8310d-petrsima.apiary-mock.com")
+    var dataSource: DataSource = .local
+//    var dataSource: DataSource = .http("http://private-8310d-petrsima.apiary-mock.com")
 //    var dataSource: DataSource = .Firebase("https://simacodecampios.firebaseio.com")
     enum DataSource {
-        case Local
-        case HTTP(String)
-        case Firebase(String)
+        case local
+        case http(String)
+//        case firebase(String)
     }
 
-    var firebaseHandle: UInt? = nil
+//    var firebaseHandle: UInt? = nil
     deinit {
-        if case .Firebase(let path) = dataSource,
-            let handle = firebaseHandle {
-                Firebase(url: path).removeObserverWithHandle(handle)
-        }
+//        if case .firebase(let path) = dataSource,
+//            let handle = firebaseHandle {
+//                Firebase(url: path).removeObserver(withHandle: handle)
+//        }
     }
 }
 
 extension TableViewController: UITableViewDataSource {
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
         let model = people[indexPath.row]
-        cell.thumbnailImageView.sd_setImageWithURL(model.photo.flatMap { NSURL(string: $0) }) // must set NSAllowsArbitraryLoads
+        cell.thumbnailImageView.sd_setImage(with: model.photo.flatMap { URL(string: $0) }) // must set NSAllowsArbitraryLoads
         cell.titleLabel.text = model.name
         cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
         return cell

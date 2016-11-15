@@ -1,33 +1,71 @@
 PODS:
-  - Alamofire (3.3.1)
-  - Argo (3.0.1)
-  - Curry (2.2.0)
-  - Firebase (2.5.1)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - SnapKit (0.20.0)
+  - Alamofire (4.0.1)
+  - Argo (4.1.0):
+    - Runes (>= 4.0.0)
+  - Curry (3.0.0)
+  - Firebase (3.9.0):
+    - Firebase/Core (= 3.9.0)
+  - Firebase/Core (3.9.0):
+    - FirebaseAnalytics (= 3.5.1)
+    - FirebaseCore (= 3.4.4)
+  - Firebase/Database (3.9.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.0)
+  - FirebaseAnalytics (3.5.1):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.4.4):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (3.1.0):
+    - FirebaseAnalytics (~> 3.4)
+  - FirebaseInstanceID (1.0.8)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - Runes (4.0.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.0.2)
   - SVProgressHUD (2.0.3)
-  - SwiftyJSON (2.3.2)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - Argo
   - Curry
   - Firebase
+  - Firebase/Database
   - SDWebImage
   - SnapKit
   - SVProgressHUD
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  Argo: 22c5d62b7967020a641468c91dc9488bea9523b8
-  Curry: c22d80fff7f5a4b1bbd531455c3e2dbb099658a3
-  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Argo: 846f1637e85257e34bfc351b5031f19bfca7555c
+  Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
+  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
+  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  FirebaseDatabase: 3ebb2edb6007c3f0f87b248f3fa212bde56a1468
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 6a9361fca37b2e39229ca18123134fcef1e0a5ac
+
+COCOAPODS: 1.2.0.beta.1

@@ -9,6 +9,7 @@
 import Foundation
 import Curry
 import Argo
+import Runes
 
 struct Person {
     let name: String
@@ -18,12 +19,12 @@ struct Person {
 }
 
 extension Person: Decodable {
-    static func decode(json: JSON) -> Decoded<Person> {
+    static func decode(_ json: JSON) -> Decoded<Person> {
         return curry(self.init)
         <^> json <| "name"
         <*> json <|? "photo"
         <*> json <|| "addresses"
-        <*> json <| "gender" <|> pure(.Thai)
+        <*> (json <| "gender" <|> pure(.thai))
     }
 }
 
@@ -33,7 +34,7 @@ struct Address {
     let type: AddressType
 }
 extension Address: Decodable {
-    static func decode(json: JSON) -> Decoded<Address> {
+    static func decode(_ json: JSON) -> Decoded<Address> {
         return curry(self.init)
         <^> json <| "city"
         <*> json <| "street"
@@ -42,15 +43,15 @@ extension Address: Decodable {
 }
 
 enum AddressType: String {
-    case Residential = "residential"
-    case Business = "bussiness"
+    case residential = "residential"
+    case business = "bussiness"
 }
 extension AddressType: Decodable { }
 
 enum Gender: String {
-    case Male = "male"
-    case Female = "female"
-    case Thai = "_allCasesShouldDefaultHere"
+    case male = "male"
+    case female = "female"
+    case thai = "_allCasesShouldDefaultHere"
 }
 extension Gender: Decodable { }
 
@@ -62,13 +63,13 @@ extension Address {
 }
 
 extension Gender {
-    private static var randomColor: UIColor = .randomColor()
+    fileprivate static var randomColor: UIColor = .randomColor()
 
     var color: UIColor {
         switch self {
-        case Male: return .blueColor()
-        case .Female: return .gayColor()
-        case .Thai: return Gender.randomColor
+        case .male: return .blue
+        case .female: return .gayColor()
+        case .thai: return Gender.randomColor
         }
     }
 }

@@ -33,24 +33,24 @@ class CollectionViewCell: UICollectionViewCell {
     weak var imageView: UIImageView!
     weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.textAlignment = .Center
+            titleLabel.textAlignment = .center
         }
     }
 
     weak var subtitleLabel: UILabel! {
         didSet {
             subtitleLabel.numberOfLines = 0
-            subtitleLabel.textAlignment = .Center
+            subtitleLabel.textAlignment = .center
         }
     }
     weak var vStack: UIStackView! {
         didSet {
-            vStack.axis = .Vertical
+            vStack.axis = .vertical
             vStack.spacing = 20
-            vStack.alignment = .Center
+            vStack.alignment = .center
             vStack.snp_makeConstraints { make in
                 make.edges.equalTo(contentView)
-                make.width.equalTo(UIScreen.mainScreen().bounds.size.width).priority(999) // lower priority to make autolayout shut up in log
+                make.width.equalTo(UIScreen.main.bounds.size.width).priority(999) // lower priority to make autolayout shut up in log
             }
         }
     }

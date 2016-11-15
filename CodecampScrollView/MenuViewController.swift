@@ -14,43 +14,43 @@ class MenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
 
-    private enum Item: Int {
-        case ScrollView = 0
-        case TableView
-        case CollectionView
+    fileprivate enum Item: Int {
+        case scrollView = 0
+        case tableView
+        case collectionView
 
         var name: String {
             switch self {
-            case .ScrollView: return "ScrollViewController"
-            case .TableView: return "TableViewController"
-            case .CollectionView: return "CollectionViewController"
+            case .scrollView: return "ScrollViewController"
+            case .tableView: return "TableViewController"
+            case .collectionView: return "CollectionViewController"
             }
         }
 
         func makeDetailController() -> UIViewController {
             switch self {
-            case .ScrollView: return ScrollViewController()
-            case .TableView: return TableViewController()
-            case .CollectionView: return CollectionViewController()
+            case .scrollView: return ScrollViewController()
+            case .tableView: return TableViewController()
+            case .collectionView: return CollectionViewController()
             }
         }
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.textLabel?.text = Item(rawValue: indexPath.row)?.name
         return cell
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let item = Item(rawValue: indexPath.row) else { return }
-        showViewController(item.makeDetailController(), sender: self)
+        show(item.makeDetailController(), sender: self)
     }
 }

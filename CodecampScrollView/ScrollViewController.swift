@@ -62,7 +62,7 @@ import SnapKit
 class ScrollViewController: UIViewController {
 
     override func loadView() {
-        let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
+        let view = UIView(); view.backgroundColor = .white; view.isOpaque = true; self.view = view
 
         let imageView = UIImageView()
         let titleLabel = UILabel()
@@ -83,21 +83,21 @@ class ScrollViewController: UIViewController {
     weak var imageView: UIImageView!
     weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.textAlignment = .Center
+            titleLabel.textAlignment = .center
         }
     }
 
     weak var subtitleLabel: UILabel! {
         didSet {
             subtitleLabel.numberOfLines = 0
-            subtitleLabel.textAlignment = .Center
+            subtitleLabel.textAlignment = .center
         }
     }
     weak var vStack: UIStackView! {
         didSet {
-            vStack.axis = .Vertical
+            vStack.axis = .vertical
             vStack.spacing = 20
-            vStack.alignment = .Center
+            vStack.alignment = .center
             vStack.snp_makeConstraints { make in
                 make.edges.equalTo(scrollView)
                 make.width.equalTo(view)
@@ -123,19 +123,19 @@ class ScrollViewController: UIViewController {
 
 extension ScrollViewController: UIScrollViewDelegate {
     // scroll
-    func scrollViewDidScroll(scrollView: UIScrollView) { }
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) { }
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) { }
-    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) { }
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) { }
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) { }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) { }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) { }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) { }
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) { }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) { }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) { }
 //    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) { // this one is the only interesting one :)
 //        targetContentOffset.memory = scrollView.center
 //    }
-    func scrollViewDidScrollToTop(scrollView: UIScrollView) { }
-    func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool { return true }
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) { }
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool { return true }
     // zoom
-    func scrollViewDidZoom(scrollView: UIScrollView) { }
-    func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) { }
-    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) { }
+    func scrollViewDidZoom(_ scrollView: UIScrollView) { }
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) { }
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) { }
 }

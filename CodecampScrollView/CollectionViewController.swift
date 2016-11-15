@@ -13,7 +13,7 @@ private let cellId = "cellId"
 //its ok to use UICollectionViewController if the collectionView will always be fullscreen. Unlike UITableViewController, the collectionView isnt the root view.
 class CollectionViewController: UIViewController {
     override func loadView() {
-        let view = UIView(); view.backgroundColor = .whiteColor(); view.opaque = true; self.view = view
+        let view = UIView(); view.backgroundColor = .white; view.isOpaque = true; self.view = view
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.addSubview(collectionView)
@@ -33,10 +33,10 @@ class CollectionViewController: UIViewController {
 
     weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.backgroundColor = .whiteColor()
+            collectionView.backgroundColor = .white
             collectionView.dataSource = self
             collectionView.delegate = self
-            collectionView.registerClass(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+            collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
             collectionView.snp_makeConstraints { make in
                 make.edges.equalTo(view)
             }
@@ -45,12 +45,12 @@ class CollectionViewController: UIViewController {
 }
 
 extension CollectionViewController: UICollectionViewDataSource {
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! CollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CollectionViewCell
         cell.imageView.image = UIImage(named: "profile")
         cell.titleLabel.text = "Lorem ipsum"
         cell.subtitleLabel.text = "Dont make this text too long."

@@ -256,8 +256,8 @@ class TableViewController: UIViewController {
             //marshal
             do {
                 let dummyKey = "dummyKey"
-                let models: [Person] = try [dummyKey: json].value(for: dummyKey)
-                self?.people = models
+//                let models: [Person] = try [dummyKey: json].value(for: dummyKey)
+//                self?.people = models
             }catch{
                   SVProgressHUD.showError(withStatus: "\(error)")
             }
@@ -317,7 +317,7 @@ extension TableViewController: UITableViewDataSource {
         let model = people[indexPath.row]
         cell.thumbnailImageView.sd_setImage(with: model.photo.flatMap { URL(string: $0) }) // must set NSAllowsArbitraryLoads
         cell.titleLabel.text = model.name
-        cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
+//        cell.subtitleLabel.text = model.addresses.map { $0.text }.reduce("") { $0 + ", " + $1 }
         return cell
     }
 }

@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Address+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Address+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Person+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Person+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CodecampScrollView.xcodeproj">
    </FileRef>
    <FileRef

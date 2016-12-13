@@ -14,4 +14,5 @@ pod 'Firebase'
 pod 'Firebase/Database'
 pod 'SwiftyJSON'
 pod 'Marshal'
+pod 'MagicalRecord'
 end

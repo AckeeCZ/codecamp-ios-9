@@ -8,6 +8,10 @@
 
 import UIKit
 import Firebase
+import MagicalRecord
+
+//the example app doesnt do anything, its just a list of examples we did in class (here in AppDelegate). The purpose of the class was to show off all the necessary technologies to start using coredata, not to make an example app. For concrete examples see MagicalRecord github or other tutorials.
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +24,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         FIRApp.configure()
+        
+        
+        
+        
+        
+        MagicalRecord.setupAutoMigratingCoreDataStack()
+        
+        
+        
+        let context = NSManagedObjectContext.mr_()
+//
+//        let fetchRequest = NSFetchRequest<[Person]>(entityName: "Person")
+//        fetchRequest.predicate = NSPredicate(format: "name == %@", "Pepa")
+//        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+//        
+//        let persons = context.execute(fetchRequest)
+
+        let persons = Person.mr_findAll() as! [Person]
+
+        
+        let firstPerson = persons.first!
+        firstPerson.name = "Pavel"
+        
+//  context.save()
+        let personJSON = ["":""]
+        MagicalRecord.save({ localCtx in
+            Person.mr_import(from: personJSON, in: localCtx)
+        })
+        
+        
+        //https://github.com/magicalpanda/MagicalRecord
+        
+        
+        
         return true
     }
 
@@ -44,4 +82,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
 }

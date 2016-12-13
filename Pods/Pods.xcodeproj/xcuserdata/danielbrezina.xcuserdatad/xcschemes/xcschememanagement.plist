@@ -6,58 +6,63 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Argo.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Curry.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Marshal.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-CodecampScrollView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Runes.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -72,12 +77,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>157CC5204A0C4C5B51386D01E2AEBDB2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>18DCDCC478F8253372D23728DD588194</key>
+		<key>158B7799E0A79610FC7AB06B7FEBB931</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>247E49894984F230E9F44FED3E9C8F95</key>
+		<key>378E1575B1A77DB0CC90AD1E5B4E59B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>378E1575B1A77DB0CC90AD1E5B4E59B9</key>
+		<key>43A87B95A611AF5D4BBED74349A97771</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D91B2653D65E30C89DEB82658E08C62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77B20D3A3FFDF7B0E0428178B0FD3FD6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C81B3C1CF2C2B035FB4BF243EF21DB34</key>
+		<key>96D028D8410E9A401CDCEFD40406EEC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1974AEC4C52329031E04A8F5E7AF2F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB1037CD0A9D25C35F197573299B9C71</key>
 		<dict>
 			<key>primary</key>
 			<true/>

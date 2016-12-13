@@ -56,20 +56,20 @@ import Runes
 //extension Gender: Decodable { }
 
 //Helpers
-extension Address {
-    var text: String {
-        return city + ", " + street
-    }
-}
-
-extension Gender {
-    fileprivate static var randomColor: UIColor = .randomColor()
-
-    var color: UIColor {
-        switch self {
-        case .male: return .blue
-        case .female: return .gayColor()
-        case .thai: return Gender.randomColor
-        }
-    }
-}
+//extension Address {
+//    var text: String {
+//        return city + ", " + street
+//    }
+//}
+//
+//extension Gender {
+//    fileprivate static var randomColor: UIColor = .randomColor()
+//
+//    var color: UIColor {
+//        switch self {
+//        case .male: return .blue
+//        case .female: return .gayColor()
+//        case .thai: return Gender.randomColor
+//        }
+//    }
+//}

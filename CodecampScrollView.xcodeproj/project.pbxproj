@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C2A27E11DDAF5EB005BBFB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */; };
+		2CEA752A1DF69992005FEA9B /* CodecampModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA75281DF69992005FEA9B /* CodecampModel.xcdatamodeld */; };
 		79165BAD1CBA9B01000F6294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAC1CBA9B01000F6294 /* AppDelegate.swift */; };
 		79165BAF1CBA9B01000F6294 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */; };
 		79165BB41CBA9B01000F6294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79165BB31CBA9B01000F6294 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CEA75291DF69992005FEA9B /* CodecampModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodecampModel.xcdatamodel; sourceTree = "<group>"; };
 		79165BA91CBA9B01000F6294 /* CodecampScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodecampScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79165BAC1CBA9B01000F6294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79165BAE1CBA9B01000F6294 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				79557A001CBB157700B02D3B /* Model */,
 				79165BB31CBA9B01000F6294 /* Assets.xcassets */,
 				79165BB51CBA9B01000F6294 /* LaunchScreen.storyboard */,
+				2CEA75281DF69992005FEA9B /* CodecampModel.xcdatamodeld */,
 				79165BB81CBA9B01000F6294 /* Info.plist */,
 				2C2A27E01DDAF5EB005BBFB8 /* GoogleService-Info.plist */,
 				79557A051CBB29C900B02D3B /* people.json */,
@@ -266,6 +269,7 @@
 				79DE82441CBAA7A2003749DB /* TableViewController.swift in Sources */,
 				79165BAD1CBA9B01000F6294 /* AppDelegate.swift in Sources */,
 				7988D6471CBEFADD00300DC7 /* MenuViewController.swift in Sources */,
+				2CEA752A1DF69992005FEA9B /* CodecampModel.xcdatamodeld in Sources */,
 				79557A021CBB168900B02D3B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CEA75281DF69992005FEA9B /* CodecampModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CEA75291DF69992005FEA9B /* CodecampModel.xcdatamodel */,
+			);
+			currentVersion = 2CEA75291DF69992005FEA9B /* CodecampModel.xcdatamodel */;
+			path = CodecampModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 79165BA11CBA9B01000F6294 /* Project object */;
 }
